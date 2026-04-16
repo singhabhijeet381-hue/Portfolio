@@ -1,0 +1,72 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<section class="hero">
+    <h1>Abhijeet Singh</h1>
+    <p>Python Backend Developer | Flask | REST APIs</p>
+
+    <div class="buttons">
+        <a href="https://github.com/singhabhijeet381-hue" target="_blank">GitHub</a>
+        <a href="https://www.linkedin.com/in/abhijeet-singh-b2a195182" target="_blank">LinkedIn</a>
+        <a href="{{ url_for('static', filename='Abhijeet_Singh_Resume.pdf') }}" download>
+        Download Resume
+        </a>
+    </div>
+</section>
+
+<hr class="divider"></hr>
+
+<section class="card">
+    <h2>About Me</h2>
+    <p>
+        Python Developer with 1.5+ years of experience in backend development, REST API design, and database
+        driven applications using .NET technologies. Currently transitioning to Python with hands-on experience in
+        Flask, Pandas, and data analysis. Proven ability to build scalable APIs, optimize SQL queries, and develop
+        efficient backend systems. Seeking a Python/Backend Developer role to leverage strong programming and
+        problem-solving skills
+    </p>
+</section>
+
+<section class="card">
+    <h2>Skills</h2>
+    <ul>
+        <li><b>Languages:</b> Python,C#,Java </li>
+        <li><b>Frameworks:</b> Flask,ASP.NET Core MVC,.NET,REST APIs,</li>
+        <li><b>Libraries & Tools:</b> Pandas,numpy,Matplotlib</li>
+        <li><b>Databases:</b> MySQL, SQL Server</li>
+        <li><b>Tools & Platforms:</b> Git, GitHub, Postman, Visual Studio, VS Code, SQL Server Management Studio</li>
+        <li><b>Core Concepts:</b> Object-Oriented Programming, MVC Architecture, API Development, Database
+        Optimization, Agile Methodologies </li>
+    </ul>
+</section>
+
+<section class="card">
+    <h2>Projects</h2>
+    <div class="projects">
+        <div class="project">Task Management API (Flask)</div>
+        <div class="project">Sales Data Analysis</div>
+        <div class="project">Task Management System (.NET)</div>
+    </div>
+</section>
+
+<section class="contact">
+    <h2>Contact</h2>
+    <p>Email: singhabhijeet381@gmail.com</p>
+    <p>Phone: 7985392985</p>
+</section>
+<script>
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add("show");
+        }
+    });
+});
+
+document.querySelectorAll(".card, .project").forEach((el) => {
+    observer.observe(el);
+});
+</script>
+
+{% endblock %}
